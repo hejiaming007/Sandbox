@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	targetNamespace="http://www.hjming.com"
+	xmlns="http://www.hjming.com"
+	>
+	<xs:element name="note">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="to" type="xs:string" />
+				<xs:element name="from" type="xs:string" />
+				<xs:element name="heading" type="xs:string" />
+				<xs:element name="body2" type="xs:string" />
+				<xs:element name="body" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+
+
+<!-- 
+
+Usually for each schema, there's a attribute:  xmlns="http://www.xxxxx.com"
+
+This attribute is uselss.   and can be delete.
+
+if elementFormDefault="qualified"
+
+both xml specify prefix or not are ok.
+
+
+else if elementFormDefault="unqualified"
+
+xml should not specify hjming prefix, otherwise validate error.
+
+
+ -->
