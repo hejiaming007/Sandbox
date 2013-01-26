@@ -23,11 +23,13 @@ public class Base64Helloworld {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
-
+ 
+		byte[] encodedBytes = new byte[]{};
+		ClassLoader.getSystemResourceAsStream("base64/Zombatar_1.jpg").read(encodedBytes);
+		//File f = new File("C:/Users/Administrator.PC-20110804EUAZ/Desktop/Zombatar_1.jpg");
 		
-		File f = new File("C:/Users/Administrator.PC-20110804EUAZ/Desktop/Zombatar_1.jpg");
 		
-		byte[] encodedBytes = getBytesFromFile(f);
+//		byte[] encodedBytes = getBytesFromFile(f);
 		
 		encodedBytes = Base64.encodeBase64(encodedBytes);
 		String string = new String(encodedBytes);
